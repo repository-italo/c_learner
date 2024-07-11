@@ -8,7 +8,6 @@ void merge(int arr[], int l, int m, int r)
    int i, j, k;
    int n1 = m - l + 1;
    int n2 = r - m;
-   printf("\n n1: %d, n2: %d \n", n1, n2);
    // Cria arrays temporarios
    int L[n1], R[n2];
    for (i = 0; i < n1; i++)
@@ -24,7 +23,8 @@ void merge(int arr[], int l, int m, int r)
 
    // Mescla os arrays temporarios de volta para arr[l ... r]
    i = 0; // Indice inicial do primeiro subarray
-   j = 0; // Indice inicial do array mesclado
+   j = 0;
+   k = l; // Indice inicial do array mesclado
    while (i < n1 && j < n2)
    {
       if (L[i] <= R[j])

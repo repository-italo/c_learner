@@ -8,7 +8,7 @@ void merge(int arr[], int l, int m, int r)
    int i, j, k;
    int n1 = m - l + 1;
    int n2 = r - m;
-
+   printf("\n n1: %d, n2: %d \n", n1, n2);
    // Cria arrays temporarios
    int L[n1], R[n2];
    for (i = 0; i < n1; i++)
@@ -85,9 +85,8 @@ void printArray(int arr[], int size)
 
 int main()
 {
-   int arr[] = {12, 11, 13, 5, 6, 7};
+   int arr[] = {3, 6, 1, 7, 2};
    size_t n = sizeof(arr) / sizeof(arr[0]);
-   printf("%i", n);
    printf("Array original: ");
    printArray(arr, n);
    mergeSort(arr, 0, n);
